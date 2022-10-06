@@ -2,10 +2,8 @@
 
 [<EntryPoint>]
 let main argv =
-  let person = 
-    if argv.Length > 0 then
-      argv.[0]
-    else
-      "Anonymous Person"
-  printfn "Hello %s from my F# program!" person
+  for i in 0..argv.Length-1 do 
+    let person = argv[i]
+    printfn "Hello %s from my F# program!" person
+  printfn "Nice to meet you."
   0

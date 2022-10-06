@@ -10,7 +10,7 @@
       "request": "launch",
       "preLaunchTask": "build",
       "program": "${workspaceFolder}/bin/Debug/net6.0/helloworld.exe",
-      "args": ["test", "123"],
+      "args": ["8cto", "Zylo", "Josh"],
       "cwd": "${workspaceFolder}",
       "stopAtEntry": false,
       "console": "internalConsole"
