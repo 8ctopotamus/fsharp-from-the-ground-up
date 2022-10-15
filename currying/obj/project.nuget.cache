@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EAPxJ4iRlnkE4/UfyoLOJssa5poFgnuJtKslKhFm2I1Ykf+KXAJnN0mKAr1aJ1qQ4gjAiSZ+aJGFQakAF8qMLw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\currying\\currying.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Josh\\.nuget\\packages\\fsharp.core\\6.0.4\\fsharp.core.6.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

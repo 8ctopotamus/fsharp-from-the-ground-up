@@ -2,20 +2,21 @@
 open System.IO
 
 module Float = 
-  let tryFromString (s : string) =
+  let tryFromString (s : string) : float option =
     if s = "N/A" then
       None
     else 
       Some (float s)
 
-  let fromStringOrDefault (d) (s) =
+  let fromStringOrDefault (d, s) : float=
     s
     |> tryFromString
     |> Option.defaultValue d
 
 type Student = 
   {
-    Name : String
+    Surname : String
+    GivenName: String
     Id : string
     MeanScore : float
     MinScore : float
@@ -23,28 +24,36 @@ type Student =
   }
 
 module Student = 
+
+  let namePart (i: int) (s : string) = 
+    let elements = s.Split(',')
+    elements.[i].Trim()
+
   let fromString (s : string) =
     let elements = s.Split('\t')
     let id = elements.[0]
     let name = elements.[1]
+    let given = namePart 0 name
+    let sur = namePart 1 name
     let scores = 
       elements
       |> Array.skip 2
-      |> Array.map (Float.fromStringOrDefault 50.0)
+      |> Array.map (fun s -> Float.fromStringOrDefault (50.0, s) )
       // |> Array.sort 
     let meanScore = scores |> Array.average
     let minScore = scores |> Array.min
     let maxScore = scores |> Array.max
     {
-      Name = name
-      Id  = id
+      Surname = sur
+      GivenName = given
+      Id = id
       MeanScore = meanScore
       MinScore  = minScore
       MaxScore = maxScore
     }
 
   let printMeanScore (student : Student) =
-    printfn "%s\t%s\t%0.1f\t%0.1f\t%0.1f" student.Name student.Id student.MeanScore student.MinScore student.MaxScore
+    printfn "%s\t%s\t%s\t%0.1f\t%0.1f\t%0.1f" student.Surname student.GivenName student.Id student.MeanScore student.MinScore student.MaxScore
 
 let summarize filePath =
   let rows = File.ReadAllLines filePath
@@ -52,7 +61,7 @@ let summarize filePath =
   rows
   |> Array.skip 1
   |> Array.map Student.fromString
-  |> Array.sortBy (fun student -> student.Name)
+  |> Array.sortBy (fun student -> student.GivenName)
   |> Array.iter Student.printMeanScore
 
 [<EntryPoint>]
