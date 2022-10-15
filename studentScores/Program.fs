@@ -8,7 +8,7 @@ module Float =
     else 
       Some (float s)
 
-  let fromStringOrDefault (d, s) : float=
+  let fromStringOrDefault d s : float=
     s
     |> tryFromString
     |> Option.defaultValue d
@@ -38,7 +38,7 @@ module Student =
     let scores = 
       elements
       |> Array.skip 2
-      |> Array.map (fun s -> Float.fromStringOrDefault (50.0, s) )
+      |> Array.map (Float.fromStringOrDefault 50.)
       // |> Array.sort 
     let meanScore = scores |> Array.average
     let minScore = scores |> Array.min
