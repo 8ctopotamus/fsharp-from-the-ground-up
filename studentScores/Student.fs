@@ -26,7 +26,7 @@ module Student =
       elements
       |> Array.skip 2
       |> Array.map TestResult.fromString
-      |> Array.map TestResult.effectiveScore
+      |> Array.choose TestResult.tryEffectiveScore
       // |> Array.sort 
     let meanScore = scores |> Array.average
     let minScore = scores |> Array.min
