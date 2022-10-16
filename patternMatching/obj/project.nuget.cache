@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Feu59YUP1sU2/FmQ+us7UVCdr2v9hMN2Y2ZBesqgvMavYQ7bW2o7IHGphJXC30sj4vprOnR6vfFYcK4ulecN6g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\patternMatching\\PatternMatching.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Josh\\.nuget\\packages\\fsharp.core\\6.0.4\\fsharp.core.6.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
