@@ -4,6 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Optional.fs" />
     <Compile Include="Float.fs" />
     <Compile Include="TestResult.fs" />
     <Compile Include="Student.fs" />
