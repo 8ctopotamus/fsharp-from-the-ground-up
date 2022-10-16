@@ -1,6 +1,7 @@
 namespace StudentScores
 
 // Distriminated Union
+
 type TestResult =
   | Absent
   | Excused
