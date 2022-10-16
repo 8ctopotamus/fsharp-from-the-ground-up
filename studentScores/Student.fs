@@ -18,14 +18,15 @@ module Student =
 
   let fromString (s : string) =
     let elements = s.Split('\t')
-    let id = elements.[0]
-    let name = elements.[1]
+    let name = elements.[0]
+    let id = elements.[1]
     let given = namePart 0 name
     let sur = namePart 1 name
     let scores = 
       elements
       |> Array.skip 2
-      |> Array.map (Float.fromStringOrDefault 50.)
+      |> Array.map TestResult.fromString
+      |> Array.map TestResult.effectiveScore
       // |> Array.sort 
     let meanScore = scores |> Array.average
     let minScore = scores |> Array.min

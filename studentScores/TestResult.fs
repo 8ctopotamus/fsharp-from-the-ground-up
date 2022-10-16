@@ -3,7 +3,7 @@ namespace StudentScores
 type TestResult =
   | Absent
   | Excused
-  | Score of float
+  | Scored of float
 
 module TestResult =
 
@@ -14,4 +14,10 @@ module TestResult =
       Excused
     else
       let value = s |> float
-      Score value
+      Scored value
+
+  let effectiveScore (testResult : TestResult) =
+    match testResult with
+    | Absent -> 0.0
+    | Excused -> 50.0
+    | Scored score -> score
