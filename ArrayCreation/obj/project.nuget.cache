@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "hwtOYEHWTl+7VdfIauCif+Nf2FCAqIqLd9FvqShuyPz5wB0AyAwOi2J7xlghzD7S3fUm20WZCPYXwelalPdyFQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\ArrayCreation\\ArrayCreation.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Josh\\.nuget\\packages\\fsharp.core\\6.0.4\\fsharp.core.6.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
