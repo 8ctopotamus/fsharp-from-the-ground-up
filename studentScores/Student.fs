@@ -1,5 +1,6 @@
 namespace StudentScores
 
+// Record - NOTE: is an "AND" type. It needs all properties to work
 type Student = 
   {
     Surname : string
@@ -17,16 +18,12 @@ module Student =
     match elements with
     | [|surname; givenName|] -> 
       // anonymous record
-      {| 
-        Surname = surname.Trim() 
-        GivenName = givenName.Trim() 
-      |}
+      {| Surname = surname.Trim() 
+         GivenName = givenName.Trim() |}
     | [|surname|] -> 
       // anonymous record
-      {| 
-        Surname = surname.Trim() 
-        GivenName = "(None)" 
-      |}
+      {| Surname = surname.Trim() 
+         GivenName = "(None)" |}
     | _ ->
       raise (System.FormatException(sprintf "Invalid name format: \"%s\"" s))
 

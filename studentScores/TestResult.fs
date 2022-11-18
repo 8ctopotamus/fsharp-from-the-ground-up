@@ -1,6 +1,6 @@
 namespace StudentScores
 
-// Distriminated Union
+// Distriminated Union - NOTE: DUs are an "OR" type, can be one of these things.
 
 type TestResult =
   | Absent

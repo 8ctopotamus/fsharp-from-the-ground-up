@@ -21,10 +21,10 @@ let main argv =
         printfn "The file is open in another program, please close it."
         2
       | _ as e ->
-        printfn "Error: %s" e.Message
+        printfn "Unexpected error: %s" e.Message
         3
     else
-      printfn "File %s does not exist" filePath
+      printfn "File %s not found" filePath
       4
   else
     printfn "Please specify a file"
