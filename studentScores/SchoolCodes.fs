@@ -6,21 +6,12 @@ module SchoolCodes =
   // open System.Collections.Generic
 
   let load (filePath : string) =
-    // let pairs = 
-    //   File.ReadAllLines filePath
-    //   |> Seq.skip 1
-    //   |> Seq.map (fun row -> 
-    //       let elements = row.Split('\t')
-    //       let id = elements.[0] |> int
-    //       let name = elements.[1]
-    //       KeyValuePair.Create(id, name) )
-    // // new Dictionary<int, string>(pairs)
-    // new Dictionary<_, _>(pairs) // NOTE Dotnet Dictionary is mutable
     File.ReadAllLines filePath
       |> Seq.skip 1
       |> Seq.map (fun row -> 
           let elements = row.Split('\t')
-          let id = elements.[0] |> int
+          let id = elements.[0]
           let name = elements.[1]
           id, name )
-      |> dict // NOTE F# dictionary is immutable
+      |> Map.ofSeq
+      |> Map.add "*" "(External)"
