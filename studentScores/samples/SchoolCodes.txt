@@ -1,0 +1,5 @@
+SchoolCode	Name
+1	Northern High School
+2	Eastern High School
+3	Southern High School
+4	Western High School

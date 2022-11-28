@@ -4,12 +4,19 @@ open StudentScores
 
 [<EntryPoint>]
 let main argv =
-    if argv.Length = 1 then
-        let filePath = argv.[0]
-        if File.Exists filePath then
-            printfn "Processing %s" filePath
+    if argv.Length = 2 then
+        let schoolCodesFilePath = argv.[0]
+        let studentsFilePath = argv.[1]
+        if not (File.Exists schoolCodesFilePath) then
+            printfn "File not found: %s" schoolCodesFilePath
+            1
+        elif not (File.Exists studentsFilePath) then
+            printfn "File not found: %s" studentsFilePath
+            2
+        else
+            printfn "Processing %s" studentsFilePath
             try
-                Summary.summarize filePath
+                Summary.summarize schoolCodesFilePath studentsFilePath
                 0
             with
             | :? FormatException as e ->
@@ -22,10 +29,7 @@ let main argv =
                 2     
             | _ as e ->
                 printfn "Unexpected error: %s" e.Message
-                3
-        else
-            printfn "File not found: %s" filePath
-            4
+                3            
     else
-        printfn "Please specify a file."
-        5
+        printfn "Please specify a studentCodesFilePath and a studentsFilePath."
+        4
