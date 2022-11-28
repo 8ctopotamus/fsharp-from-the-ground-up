@@ -1,0 +1,5 @@
+SchoolCode	Name
+NHS	Northern High School
+EHS	Eastern High School
+SHS	Southern High School
+WHS	Western High School
