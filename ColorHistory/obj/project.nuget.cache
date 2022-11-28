@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "QSiuz5Uiv+33KiZR8aEX6wepfPCaxHuNafhlHVj83+Ib0pYvI93psTJhMae4ti+s9kqBfg4uWMs4bEDeKKdxog==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\ColorHistory\\ColorHistory.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Josh\\.nuget\\packages\\fsharp.core\\6.0.4\\fsharp.core.6.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
