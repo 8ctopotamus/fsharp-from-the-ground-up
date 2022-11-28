@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\studentScores\\studentScores.fsproj": {}
+    "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\StudentScores\\StudentScores.fsproj": {}
   },
   "projects": {
-    "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\studentScores\\studentScores.fsproj": {
+    "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\StudentScores\\StudentScores.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\studentScores\\studentScores.fsproj",
-        "projectName": "studentScores",
-        "projectPath": "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\studentScores\\studentScores.fsproj",
+        "projectUniqueName": "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\StudentScores\\StudentScores.fsproj",
+        "projectName": "StudentScores",
+        "projectPath": "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\StudentScores\\StudentScores.fsproj",
         "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\studentScores\\obj\\",
+        "outputPath": "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\StudentScores\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Josh\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -7,11 +7,11 @@ open System
 open System.Reflection
 
 
-[<assembly: System.Reflection.AssemblyCompanyAttribute("StudentScores")>]
+[<assembly: System.Reflection.AssemblyCompanyAttribute("SequenceCreation")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
 [<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")>]
-[<assembly: System.Reflection.AssemblyProductAttribute("StudentScores")>]
-[<assembly: System.Reflection.AssemblyTitleAttribute("StudentScores")>]
+[<assembly: System.Reflection.AssemblyProductAttribute("SequenceCreation")>]
+[<assembly: System.Reflection.AssemblyTitleAttribute("SequenceCreation")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]
 do()

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XzKOecjwOnFrvoq53P1ySOC11wZP1SzuyuR95KayQWEplHIllfuZIjS/Y3vxB5cLD+hJvSeJS0RaPSgjtpde8A==",
+  "dgSpecHash": "BtdI8n6WXBqXbx+HnQ0xzgHKvD/90nY1POj16QX/Y6VTdVkgas+8iviaDs791uawKsO/Gw+6KA2uyR9f4QH8ag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\studentScores\\studentScores.fsproj",
+  "projectFilePath": "C:\\Users\\Josh\\code\\fsharp-from-ground-up\\StudentScores\\StudentScores.fsproj",
   "expectedPackageFiles": [
     "C:\\Users\\Josh\\.nuget\\packages\\fsharp.core\\6.0.4\\fsharp.core.6.0.4.nupkg.sha512"
   ],
