@@ -6,7 +6,7 @@ let main argv =
 
     let bricks =
 
-        seq {
+        [|
             (3, 2, ConsoleColor.Yellow)
             (4, 2, ConsoleColor.Green)
             (2, 1, ConsoleColor.Magenta)
@@ -27,41 +27,40 @@ let main argv =
             (1, 1, ConsoleColor.Green)
             (2, 1, ConsoleColor.Yellow)
             (4, 1, ConsoleColor.Magenta)
-        }
-        |> Seq.map (fun (sc, sr, cc) -> { StudColumns = sc; StudRows = sr; Color = cc })
-        |> Seq.cache
+        |]
+        |> Array.map (fun (sc, sr, cc) -> { StudColumns = sc; StudRows = sr; Color = cc })
 
     printfn "All the bricks:"
     bricks
-    |> Seq.iter (Brick.printConsole)
+    |> Array.iter (Brick.printConsole)
     printfn "\n"
 
     printfn "Count of the bricks:"
-    let count = bricks |> Seq.length
+    let count = bricks |> Array.length
     printfn "Count: %i\n" count    
 
     printfn "Stud counts:"
     bricks
-    |> Seq.map (fun b -> b.StudColumns * b.StudRows)
-    |> Seq.iter (fun c -> printf "%i; " c)
+    |> Array.map (fun b -> b.StudColumns * b.StudRows)
+    |> Array.iter (fun c -> printf "%i; " c)
     printfn "\n"
 
-    printfn "Red bricks (Seq.filter):"
+    printfn "Red bricks (Array.filter):"
     bricks
-    |> Seq.filter (fun b -> b.Color = ConsoleColor.Red)
-    |> Seq.iter Brick.printConsole
+    |> Array.filter (fun b -> b.Color = ConsoleColor.Red)
+    |> Array.iter Brick.printConsole
     printfn "\n"
 
-    printfn "Grouped by color (Seq.groupBy):"
+    printfn "Grouped by color (Array.groupBy):"
     let groupedByColor =
         bricks
-        |> Seq.groupBy (fun b -> b.Color)
+        |> Array.groupBy (fun b -> b.Color)
  
     groupedByColor
-    |> Seq.iter (fun (color, bricks) ->
+    |> Array.iter (fun (color, bricks) ->
         printfn "%s:" (color.ToString())
         bricks
-        |> Seq.iter Brick.printConsole
+        |> Array.iter Brick.printConsole
         printfn ""
     )
     printfn ""
@@ -69,14 +68,14 @@ let main argv =
     printfn "Grouped by num studs:"
     let groupedByStudCount = 
         bricks
-        |> Seq.groupBy (fun b -> b.StudColumns * b.StudRows)
+        |> Array.groupBy (fun b -> b.StudColumns * b.StudRows)
     
     groupedByStudCount
-    |> Seq.sortByDescending fst
-    |> Seq.iter (fun (studCount, bricks) -> 
+    |> Array.sortByDescending fst
+    |> Array.iter (fun (studCount, bricks) -> 
         printfn "%i stud:", studCount
         bricks
-        |> Seq.iter Brick.printConsole
+        |> Array.iter Brick.printConsole
         printfn "")
     printfn ""
     
